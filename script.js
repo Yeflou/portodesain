@@ -1032,4 +1032,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
         viewport.innerHTML = htmlContent;
     };
+
+    // Creative/Design Section Tabs
+    const creativeTabBtns = document.querySelectorAll('.creative-tab-btn');
+    const creativeTabContents = document.querySelectorAll('.creative-tab-content');
+
+    creativeTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            creativeTabBtns.forEach(b => b.classList.remove('active'));
+            creativeTabContents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            const targetTab = document.getElementById(`tab-${btn.getAttribute('data-tab')}`);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
+        });
+    });
 });
