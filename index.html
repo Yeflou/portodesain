@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullstack Developer Portfolio</title>
-    
+    <title>Amelia Flora </title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -48,27 +48,25 @@
         <div class="container hero-about-grid">
 
             <div class="hero-content">
-                <span class="badge">Mahasiswa Informatika / Fullstack Developer</span>
+                <span class="badge">Software Developer dengan Kemampuan UI/UX Design</span>
                 <h1 class="hero-title">Halo, Saya <span class="text-highlight">Amelia Flora Aprilianingrum</span></h1>
-                <h2 class="hero-subtitle">Mahasiswa Informatika Semester 6 & Fullstack Developer</h2>
+                <h2 class="hero-subtitle">Merancang, Mengembangkan, dan Menguji Solusi Digital dari Konsep hingga
+                    Implementasi.
+                </h2>
 
                 <div class="about-description">
                     <p>
-                        Saya adalah seorang mahasiswi program studi <strong>Teknik Informatika semester 6</strong> yang
-                        memiliki ketertarikan mendalam pada pengembangan aplikasi web. Saya aktif mempelajari konsep
-                        frontend dan backend, serta senang membangun sistem yang mengintegrasikan keduanya secara
-                        fungsional.
+                        Saya berfokus pada pengembangan produk digital yang fungsional, mudah digunakan,
+                        dan berorientasi pada kebutuhan pengguna. Memiliki pengalaman dalam analisis sistem,
+                        perancangan database, UI/UX Design, pengembangan aplikasi web dan mobile,
+                        serta pengujian sistem dari tahap perencanaan hingga implementasi.
                     </p>
-                    <p>
-                        Dengan bekal mata kuliah pemrograman, proyek perkuliahan, dan antusiasme tinggi untuk
-                        mengeksplorasi teknologi baru, saya siap berkolaborasi dalam merancang solusi digital yang
-                        bersih, terstruktur, dan siap pakai.
-                    </p>
+
                 </div>
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-laptop-code"></i></a>
-                    
+
                     <a href="#" class="btn btn-secondary" download="CV_Amelia_Flora.pdf">Unduh CV <i
                             class="fa-solid fa-file-arrow-down"></i></a>
                     <a href="#contact" class="btn btn-outline">Hubungi Saya <i class="fa-regular fa-envelope"></i></a>
@@ -77,7 +75,7 @@
             </div>
 
             <div class="hero-photo-container">
-                
+
                 <div class="profile-photo-wrapper photo-placeholder" id="photoFrame">
                     <div class="placeholder-icon">
                         <i class="fa-regular fa-image"></i>
@@ -106,109 +104,146 @@
                 <button class="filter-btn active" data-filter="all">Semua</button>
                 <button class="filter-btn" data-filter="fullstack">Fullstack</button>
                 <button class="filter-btn" data-filter="frontend">Frontend</button>
-                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
             </div>
 
             <div class="projects-grid">
 
+                <!-- Proyek 1: Sistem Informasi Posyandu -->
                 <div class="project-card" data-category="fullstack">
-                    <div class="project-img-placeholder">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <span>EcoSphere SaaS</span>
+                    <div class="project-img-container">
+                        <img src="assets/posyandu.jpg" alt="Sistem Informasi Posyandu" class="project-img">
                     </div>
                     <div class="project-content">
-                        <span class="project-badge">Fullstack Application</span>
-                        <h3 class="project-title">EcoSphere - Kolaborasi Manajemen Proyek</h3>
-                        <p class="project-desc">Aplikasi SaaS kolaborasi untuk tim proyek hijau. Dilengkapi fitur
-                            manajemen tugas real-time, obrolan kelompok, dan pelacakan jejak karbon terintegrasi.</p>
+                        <span class="project-badge">Web Application</span>
+                        <h3 class="project-title">Sistem Informasi Posyandu</h3>
+                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Software Developer & UI/UX Designer
+                        </div>
+                        <p class="project-desc">Sistem digital untuk pendaftaran dan pemeriksaan balita di Posyandu Kemuning 12.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>PostgreSQL</span>
-                            <span>Socket.io</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-brands fa-github"></i> Kode</a>
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="posyandu">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Proyek 2: Sistem Informasi Perpustakaan -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-img-container">
+                        <img src="assets/perpus.jpg" alt="Sistem Informasi Perpustakaan" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Backend Application</span>
+                        <h3 class="project-title">Sistem Informasi Perpustakaan</h3>
+                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Backend & Software Developer
+                        </div>
+                        <p class="project-desc">Aplikasi manajemen perpustakaan berbasis REST API untuk pengelolaan buku dan anggota.</p>
+                        <div class="project-tech">
+                            <span>Golang</span>
+                            <span>Gin</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="perpustakaan">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Google Sheets Data Filtering -->
                 <div class="project-card" data-category="frontend">
-                    <div class="project-img-placeholder">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <span>FinTrack Analytics</span>
+                    <div class="project-img-container">
+                        <img src="assets/gsheets.jpg" alt="Google Sheets Data Filtering & Integration" class="project-img">
                     </div>
                     <div class="project-content">
-                        <span class="project-badge">Frontend Application</span>
-                        <h3 class="project-title">FinTrack - Visualisasi Keuangan Pribadi</h3>
-                        <p class="project-desc">Dashboard keuangan interaktif yang menyajikan laporan pengeluaran
-                            bulanan, prediksi arus kas, dan analisis visual dengan grafik responsif.</p>
+                        <span class="project-badge">API Integration</span>
+                        <h3 class="project-title">Google Sheets Data Filtering & Integration</h3>
+                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Software Developer
+                        </div>
+                        <p class="project-desc">Sistem integrasi data menggunakan Google Sheets API untuk pengambilan dan filtering data secara otomatis.</p>
                         <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>Vite</span>
-                            <span>Chart.js</span>
-                            <span>TailwindCSS</span>
+                            <span>PHP</span>
+                            <span>Google Sheets API</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-brands fa-github"></i> Kode</a>
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="gsheets">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="backend">
-                    <div class="project-img-placeholder">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>AuthShield OAuth2</span>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Backend Service</span>
-                        <h3 class="project-title">AuthShield - Server OAuth2 & JWT Terdistribusi</h3>
-                        <p class="project-desc">Layanan otentikasi mandiri berkinerja tinggi berbasis OAuth2. Mampu
-                            menangani ribuan permintaan sesi per detik dengan latensi minimal.</p>
-                        <div class="project-tech">
-                            <span>Go (Golang)</span>
-                            <span>Redis</span>
-                            <span>PostgreSQL</span>
-                            <span>Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-brands fa-github"></i> Kode</a>
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i> Dokumentasi API</a>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Proyek 4: Sistem Inventaris Handphone -->
                 <div class="project-card" data-category="fullstack">
-                    <div class="project-img-placeholder">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>DepotKu E-Commerce</span>
+                    <div class="project-img-container">
+                        <img src="assets/inventoryhp.jpg" alt="Sistem Inventaris Handphone" class="project-img">
                     </div>
                     <div class="project-content">
-                        <span class="project-badge">Fullstack Application</span>
-                        <h3 class="project-title">DepotKu - Platform B2B Grosir UMKM</h3>
-                        <p class="project-desc">Portal e-commerce khusus untuk transaksi grosir antar pelaku UMKM.
-                            Terintegrasi dengan multi-ekspedisi dan gateway pembayaran otomatis.</p>
+                        <span class="project-badge">Information System</span>
+                        <h3 class="project-title">Sistem Inventaris Handphone</h3>
+                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Software Developer
+                        </div>
+                        <p class="project-desc">Aplikasi inventaris untuk mengelola stok dan data perangkat handphone.</p>
                         <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>GraphQL</span>
-                            <span>Prisma</span>
-                            <span>PostgreSQL</span>
-                            <span>Midtrans</span>
+                            <span>CodeIgniter</span>
+                            <span>MySQL</span>
+                            <span>CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-brands fa-github"></i> Kode</a>
-                            <a href="#" class="project-link" target="_blank" rel="noopener"><i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="inventoryhp">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 5: SumTime -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-img-container">
+                        <img src="assets/sumtime.jpg" alt="SumTime - Aplikasi Pemesanan Dimsum" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Mobile Application</span>
+                        <h3 class="project-title">SumTime - Aplikasi Pemesanan Dimsum</h3>
+                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Mobile Developer & UI/UX Designer
+                        </div>
+                        <p class="project-desc">Aplikasi mobile untuk pemesanan dimsum dengan autentikasi dan penyimpanan data real-time.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="sumtime">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -348,7 +383,7 @@
             </div>
 
             <div class="creative-grid">
-                
+
                 <div class="creative-card">
                     <div class="creative-icon">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -356,7 +391,7 @@
                     <h3>UI/UX Design</h3>
                     <p>Perancangan antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang berfokus pada riset
                         pengguna, wireframing, prototyping di Figma, serta desain yang interaktif dan intuitif.</p>
-                    
+
                     <a href="https://www.figma.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                         Lihat Portofolio UI/UX <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
@@ -370,7 +405,7 @@
                     <p>Karya desain grafis kreatif meliputi identitas visual (branding), ilustrasi digital, desain
                         poster/feed media sosial, dan pembuatan aset menggunakan Adobe Illustrator, Photoshop, atau
                         Canva.</p>
-                    
+
                     <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                         Lihat Desain Grafis <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
@@ -388,7 +423,7 @@
             </div>
 
             <div class="contact-grid-3col">
-                
+
                 <div class="contact-col brand-col">
                     <a href="#" class="nav-logo footer-logo">
                         <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
@@ -461,6 +496,57 @@
             </button>
         </div>
     </footer>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-wrapper">
+            <button class="modal-close" id="modalClose" aria-label="Tutup Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-container">
+                <!-- Left Side: Text Information & Metadata -->
+                <div class="modal-details-side">
+                    <span class="modal-badge" id="modalBadge">Web Application</span>
+                    <h2 class="modal-title" id="modalTitle">Sistem Informasi Posyandu</h2>
+                    
+                    <p class="modal-description-text" id="modalAbout">Sistem digital untuk pendaftaran...</p>
+                    <div class="modal-tech-text" id="modalTechText">HTML • CSS • JavaScript • MySQL</div>
+                    
+                    <div class="modal-info-block">
+                        <h4 class="info-heading">Peran Saya</h4>
+                        <ul class="modal-roles-list" id="modalRolesList">
+                            <!-- Roles will be injected dynamically -->
+                        </ul>
+                    </div>
+
+                    <div class="modal-info-block">
+                        <h4 class="info-heading">Fitur Utama</h4>
+                        <ul class="modal-features-list" id="modalFeaturesList">
+                            <!-- Features will be injected dynamically -->
+                        </ul>
+                    </div>
+
+                    <div class="modal-info-block">
+                        <h4 class="info-heading">Tautan</h4>
+                        <div class="modal-links-container">
+                            <a href="https://github.com" class="btn btn-primary btn-modal-github" id="modalGithubLink" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> Repository GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Preview Sistem 2x2 Grid -->
+                <div class="modal-preview-side">
+                    <h4 class="info-heading">Preview Sistem</h4>
+                    <div class="previews-grid" id="previewsGrid">
+                        <!-- 4 live CSS mockup frames will be injected dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
