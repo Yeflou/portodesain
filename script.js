@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -60% 0px', 
+        rootMargin: '-20% 0px -60% 0px',
         threshold: 0
     };
 
@@ -79,19 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            
+
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
 
             projectCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                
+
                 if (filterValue === 'all' || cardCategory === filterValue) {
                     card.style.display = 'flex';
-                    
+
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.95)';
                     setTimeout(() => {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (photoFrame && photoInput) {
         photoFrame.addEventListener('click', () => {
-            
+
             if (photoFrame.classList.contains('photo-placeholder')) {
                 photoInput.click();
             }
@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (file) {
                 const reader = new FileReader();
                 reader.onload = (e) => {
-                    
+
                     photoFrame.classList.remove('photo-placeholder');
-                    photoFrame.innerHTML = ''; 
+                    photoFrame.innerHTML = '';
 
                     const img = document.createElement('img');
                     img.src = e.target.result;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     editOverlay.style.color = '#fff';
                     editOverlay.style.cursor = 'pointer';
                     editOverlay.innerHTML = '<i class="fa-solid fa-pen" style="font-size: 2rem; margin-bottom: 10px;"></i><span>Ganti Foto</span>';
-                    
+
                     photoFrame.appendChild(img);
                     photoFrame.appendChild(editOverlay);
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         editOverlay.style.opacity = '0';
                     });
                     editOverlay.addEventListener('click', (ev) => {
-                        ev.stopPropagation(); 
+                        ev.stopPropagation();
                         photoInput.click();
                     });
                 };
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnIcon.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
 
             setTimeout(() => {
-                
+
                 formStatus.style.display = 'block';
                 formStatus.className = 'form-status success';
                 formStatus.innerHTML = '<i class="fa-regular fa-circle-check"></i> Pesan terkirim! Terima kasih telah menghubungi saya.';
@@ -205,23 +205,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PROJECT MODAL FUNCTIONALITY ---
     const projectsData = {
         posyandu: {
-            title: "Sistem Informasi Posyandu",
+            title: "Sistem Informasi Posyandu 13",
             badge: "WEB APPLICATION",
             tech: "HTML • CSS • JavaScript • MySQL",
-            about: "Sistem Informasi Posyandu Kemuning 12 adalah sebuah platform digital yang dirancang untuk memodernisasi pencatatan data kesehatan balita, pendaftaran, dan rekam medis tumbuh kembang anak secara real-time.",
+            about: "Aplikasi web yang dirancang untuk menyelesaikan masalah pencatatan manual berulang, mempercepat alur pelayanan balita, dan mempermudah rekapitulasi laporan bulanan di Posyandu Kemuning 13, Surakarta.",
             roles: [
-                "Analisis Sistem",
+                "Analisis Sistem Metode Agile",
                 "Database Design",
                 "UI/UX Design",
-                "Development",
+                "Web Developer",
                 "Testing"
             ],
             features: [
-                "Pendaftaran Balita secara Online",
-                "Pencatatan Rekam Medis (Tinggi & Berat Badan)",
-                "Pemantauan Kurva KMS (Kartu Menuju Sehat)",
-                "Laporan Kesehatan Balita Otomatis",
-                "Monitoring Status Gizi Anak"
+                "Akses login khusus kader.",
+                "Manajemen Data (CRUD): Pengelolaan data profil balita dan rekam medis secara dinamis.",
+                "Akses spesifik pencarian riwayat balita via nama/nomor registrasi.",
+                "Unduh otomatis rekapitulasi bulanan posyandu."
+
             ],
             github: "https://github.com/ameliaflora/posyandu-kemuning",
             gallery: [
@@ -236,17 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Sistem Informasi Perpustakaan",
             badge: "BACKEND APPLICATION",
             tech: "Golang • Gin • PostgreSQL",
-            about: "Aplikasi manajemen perpustakaan berbasis REST API untuk otomasi manajemen sirkulasi buku, keanggotaan, pencatatan transaksi peminjaman, dan denda secara otomatis.",
+            about: "Aplikasi manajemen perpustakaan berbasis REST API untuk otomasi manajemen peminjaman dan pengelolaan data buku.",
             roles: [
-                "Database Design",
-                "API Development",
-                "API Documentation",
-                "Middleware & Security",
-                "Integration Testing"
+                "Web Developer (Frontend & Backend)",
             ],
             features: [
-                "Manajemen Katalog Buku & Kategori",
-                "Sistem Keanggotaan Perpustakaan",
+                "Manajemen Katalog Buku",
                 "Pencatatan Transaksi Peminjaman & Pengembalian",
                 "Kalkulasi Denda Keterlambatan Otomatis",
                 "Autentikasi JWT (JSON Web Token)"
@@ -264,27 +259,28 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Google Sheets Data Filtering & Integration",
             badge: "API INTEGRATION",
             tech: "PHP • Google Sheets API",
-            about: "Sistem integrasi data otomatis untuk penarikan data dari Google Sheets API, penyaringan berdasarkan parameter dinamis, dan pemrosesan data ke server lokal.",
+            about: "Sistem integrasi data otomatis untuk penarikan database dari Google Sheets API, penyaringan, dan pemrosesan data ke server lokal.",
             roles: [
-                "Sistem Integrasi",
+                "Frontend Developer",
+
                 "API Integration",
-                "Data Filtering Development",
-                "Cache Optimization",
-                "Testing"
+
+
             ],
             features: [
                 "Koneksi Google Sheets API (Service Account)",
                 "Penyaringan Baris Data secara Real-Time",
                 "Sinkronisasi Data Dua Arah",
-                "Caching Data untuk Limit Kuota API",
+
                 "Visualisasi Dashboard Hasil Filter"
             ],
             github: "https://github.com/ameliaflora/gsheets-integration",
             gallery: [
+                { id: "dashboard", label: "Dashboard" },
                 { id: "dashboard", label: "Dashboard Filter" },
                 { id: "source-sheets", label: "Source Google Sheets" },
                 { id: "processed-data", label: "Data Terproses" },
-                { id: "api-status", label: "Status Koneksi API" }
+
             ],
             type: "browser"
         },
@@ -296,8 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             roles: [
                 "Analisis Sistem",
                 "Database Design",
-                "UI/UX Design",
-                "Development",
+                "Web Developer (Frontend & Backend)",
                 "Testing"
             ],
             features: [
@@ -320,29 +315,55 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "SumTime - Aplikasi Pemesanan Dimsum",
             badge: "MOBILE APPLICATION",
             tech: "Flutter • Supabase",
-            about: "Aplikasi mobile lintas platform (iOS & Android) untuk pemesanan dimsum online secara instan, lengkap dengan keranjang belanja dinamis dan pelacakan status pesanan real-time.",
+            about: "Aplikasi SumTime menghadirkan platform digital untuk menyederhanakan proses pemesanan makanan, mulai dari mengakses informasi produk hingga pembayaran. Aplikasi ini juga bertujuan mendukung pemilik usaha dalam mengelola operasional secara terstruktur, seperti pengaturan data menu, pesanan, dan informasi penjualan",
             roles: [
-                "Mobile Development",
-                "UI/UX Design",
-                "Database Design (PostgreSQL)",
-                "Real-time Service Integration",
+                "Sketsa wireframe",
+                "Autentikasi dan mengintegrasikan basis data real-time menggunakan Supabase",
+                "Deploy antarmuka Beranda, Checkout, Rincian Pesanan, Menu, Admin Dashboard",
                 "Testing"
             ],
             features: [
                 "Katalog Menu Dimsum Interaktif",
                 "Keranjang Belanja & Checkout Instan",
                 "Autentikasi Pengguna (Supabase Auth)",
-                "Pelacakan Status Pesanan secara Real-Time",
-                "Notifikasi Pesanan Dapur & Pengantaran"
+                "Pelacakan pesanan pengguna & manajemen pesanan admin."
             ],
-            github: "https://github.com/ameliaflora/sumtime-flutter",
+            github: "https://github.com/IsnaAinur/sumtime",
             gallery: [
-                { id: "dashboard", label: "Dashboard Dimsum" },
+                { id: "login", label: "Halaman Login" },
+                { id: "berandapengguna", label: "Halaman Beranda Pengguna" },
                 { id: "keranjang", label: "Keranjang Belanja" },
-                { id: "status-pesanan", label: "Status Pesanan" },
-                { id: "detail-menu", label: "Detail Menu" }
+                { id: "statuspesanan", label: "Status Pesanan" },
+
             ],
             type: "mobile"
+        },
+        desacerme: {
+            title: "Laporan Desa Cerme",
+            badge: "WEB APPLICATION",
+            tech: "HTML • CSS • JavaScript • EmailJS",
+            about: "Sistem Layanan Aspirasi dan Pengaduan Online Masyarakat Desa Cerme. Warga dapat dengan mudah menyampaikan keluhan dan masukan yang langsung dikirimkan secara instan ke email resmi pemerintah desa melalui integrasi client-side EmailJS.",
+            roles: [
+                "Web Developer",
+                "EmailJS API Integration",
+                "Form Validation & Error Handling",
+                "Client-side Testing"
+            ],
+            features: [
+                "Formulir laporan aspirasi/keluhan yang interaktif.",
+                "Integrasi EmailJS untuk pengiriman laporan real-time tanpa database backend.",
+
+                "Halaman sukses pengiriman laporan (thank-you page).",
+
+            ],
+            github: "https://github.com/Yeflou/laporan-desa-cerme",
+            gallery: [
+                { id: "home", label: "Halaman Utama" },
+                { id: "form-laporan", label: "Formulir Laporan" },
+                { id: "validasi", label: "Validasi Input" },
+                { id: "thank-you", label: "Halaman Sukses" }
+            ],
+            type: "browser"
         }
     };
 
@@ -461,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalClose && modalOverlay) {
         modalClose.addEventListener('click', closeProjectModal);
         modalOverlay.addEventListener('click', closeProjectModal);
-        
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeProjectModal();
@@ -484,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderBrowserScreenContent = (viewport, projectKey, screenId) => {
         let htmlContent = '';
-        
+
         if (projectKey === 'posyandu') {
             if (screenId === 'dashboard') {
                 htmlContent = `
@@ -908,14 +929,88 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             }
+        } else if (projectKey === 'desacerme') {
+            if (screenId === 'home') {
+                htmlContent = `
+                    <div class="mock-view cerme-home" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
+                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px 4px 0 0;">
+                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-tree-city"></i> Desa Cerme</h5>
+                            <span class="badge-live" style="font-size: 0.55rem; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 4px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><span class="pulse-dot" style="width: 6px; height: 6px; background: #4caf50; border-radius: 50%; display: inline-block;"></span> Online</span>
+                        </div>
+                        <div style="padding: 20px 14px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f1f8e9;">
+                            <h6 style="font-size: 0.85rem; margin-bottom: 6px; color: #1b5e20; font-weight: 800; line-height: 1.2;">Layanan Pengaduan & Aspirasi Warga</h6>
+                            <p style="font-size: 0.6rem; color: #558b2f; margin-bottom: 12px; max-width: 180px; line-height: 1.4;">Laporkan masalah infrastruktur, sosial, atau keamanan desa Anda secara langsung.</p>
+                            <button class="btn-mock-add" style="background: #2e7d32; color: white; border: none; padding: 6px 14px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(46,125,50,0.3);"><i class="fa-solid fa-pen-to-square"></i> Buat Laporan</button>
+                        </div>
+                    </div>
+                `;
+            } else if (screenId === 'form-laporan') {
+                htmlContent = `
+                    <div class="mock-view cerme-form" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
+                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
+                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-file-invoice"></i> Formulir Laporan</h5>
+                        </div>
+                        <div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; background: #ffffff; flex-grow: 1; justify-content: center;">
+                            <div style="display: flex; flex-direction: column; gap: 2px;">
+                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Nama Pelapor</label>
+                                <input type="text" value="Amelia Flora" disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333;">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 2px;">
+                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Kategori</label>
+                                <select disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333;">
+                                    <option>Fasilitas Umum / Infrastruktur</option>
+                                </select>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 2px;">
+                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Isi Pengaduan</label>
+                                <textarea disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333; resize: none; height: 35px;">Jalan rusak dan berlubang parah di dekat pertigaan RT 03 RW 02 Desa Cerme.</textarea>
+                            </div>
+                            <button style="background: #2e7d32; color: white; border: none; padding: 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 4px;"><i class="fa-regular fa-paper-plane"></i> Kirim Laporan</button>
+                        </div>
+                    </div>
+                `;
+            } else if (screenId === 'validasi') {
+                htmlContent = `
+                    <div class="mock-view cerme-validasi" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
+                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
+                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Validasi Sistem</h5>
+                        </div>
+                        <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; background: #fff; flex-grow: 1; justify-content: center;">
+                            <div style="background: rgba(217, 48, 37, 0.08); border: 1px solid #d93025; border-radius: 6px; padding: 6px 10px; display: flex; align-items: center; gap: 6px; color: #d93025; font-size: 0.6rem; font-weight: 600;">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>Email pelapor tidak valid!</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 2px;">
+                                <label style="font-size: 0.55rem; color: #d93025; font-weight: 700;">Alamat Email</label>
+                                <input type="text" value="ameliaflora.com" disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid #d93025; border-radius: 4px; background: #fff8f8; color: #d93025;">
+                            </div>
+                            <p style="font-size: 0.55rem; color: var(--text-muted); margin: 0; line-height: 1.3;">Sistem memvalidasi email menggunakan regex untuk memastikan balasan dari admin desa dapat terkirim balik dengan benar.</p>
+                        </div>
+                    </div>
+                `;
+            } else if (screenId === 'thank-you') {
+                htmlContent = `
+                    <div class="mock-view cerme-success" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
+                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
+                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-envelope-circle-check"></i> Pengiriman Sukses</h5>
+                        </div>
+                        <div style="padding: 20px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #e8f5e9; flex-grow: 1;">
+                            <div style="width: 32px; height: 32px; background: #c8e6c9; color: #2e7d32; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 6px rgba(46,125,50,0.15); animation: pulse 2s infinite;">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h6 style="font-size: 0.8rem; margin: 0; color: #1b5e20; font-weight: 800;">Laporan Terkirim!</h6>
+                            <p style="font-size: 0.55rem; color: #33691e; margin: 0; line-height: 1.4; max-width: 170px;">Data laporan telah dikirimkan ke email pemerintah desa secara instan via <strong>EmailJS API</strong>.</p>
+                        </div>
+                    </div>
+                `;
+            }
         }
-        
         viewport.innerHTML = htmlContent;
     };
 
     const renderMobileScreenContent = (viewport, projectKey, screenId) => {
         let htmlContent = '';
-        
+
         if (projectKey === 'sumtime') {
             if (screenId === 'dashboard') {
                 htmlContent = `
@@ -1029,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
         }
-        
+
         viewport.innerHTML = htmlContent;
     };
 

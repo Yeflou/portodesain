@@ -22,8 +22,20 @@
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
+            <a href="#" class="nav-logo-custom">
+                <span class="logo-prefix"></span>
+                <span class="logo-letter">a</span>
+                <span class="logo-letter">m</span>
+                <span class="logo-letter">e</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter accent-i">ı</span>
+                <span class="logo-letter accent-a">a</span>
+                <span class="logo-dot"></span>
+                <span class="logo-letter">f</span>
+                <span class="logo-letter">l</span>
+                <span class="logo-letter">o</span>
+                <span class="logo-letter">r</span>
+                <span class="logo-letter">a</span>
             </a>
 
             <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
@@ -108,6 +120,37 @@
             </div>
 
             <div class="projects-grid">
+                <!-- Proyek 5: SumTime -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-img-container">
+                        <img src="assets/sumtime.jpg" alt="SumTime - Aplikasi Pemesanan Dimsum" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Mobile Application</span>
+                        <h3 class="project-title">SumTime - Aplikasi Pemesanan Dimsum</h3>
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Mobile Developer
+                        </div>
+                        <p class="project-desc">Aplikasi pemesanan dimsum berbasis mobile yang
+                            dirancang untuk mempermudah proses transaksi antara pelanggan dan pemilik usaha agar lebih
+                            cepat dan teratur dibandingkan metode manual. </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="sumtime">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com/IsnaAinur/sumtime" class="project-link" target="_blank"
+                                rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- Proyek 1: Sistem Informasi Posyandu -->
                 <div class="project-card" data-category="fullstack">
@@ -117,10 +160,12 @@
                     <div class="project-content">
                         <span class="project-badge">Web Application</span>
                         <h3 class="project-title">Sistem Informasi Posyandu</h3>
-                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Software Developer & UI/UX Designer
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Web Developer
                         </div>
-                        <p class="project-desc">Sistem digital untuk pendaftaran dan pemeriksaan balita di Posyandu Kemuning 12.</p>
+                        <p class="project-desc">Sistem digital untuk pendaftaran dan pemeriksaan balita di Posyandu
+                            Kemuning 13.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -131,7 +176,39 @@
                             <button class="btn btn-secondary btn-sm btn-detail" data-project="posyandu">
                                 <i class="fa-solid fa-circle-info"></i> Lihat Detail
                             </button>
-                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                            <a href="https://github.com/Yeflou/posyandubalita" class="project-link" target="_blank"
+                                rel="noopener">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Google Sheets Data Filtering -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-container">
+                        <img src="assets/gsheets.jpg" alt="Google Sheets Data Filtering & Integration"
+                            class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">API Integration</span>
+                        <h3 class="project-title">Google Sheets Data Filtering & Integration</h3>
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Software Developer
+                        </div>
+                        <p class="project-desc">Sistem integrasi data menggunakan Google Sheets API untuk database
+                            dan filtering data secara otomatis.</p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>Google Sheets API</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="gsheets">
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
+                            </button>
+                            <a href="https://github.com/Yeflou/gsheetsdatabase" class="project-link" target="_blank"
+                                rel="noopener">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
@@ -146,10 +223,12 @@
                     <div class="project-content">
                         <span class="project-badge">Backend Application</span>
                         <h3 class="project-title">Sistem Informasi Perpustakaan</h3>
-                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                             <strong>Role:</strong> Backend & Software Developer
                         </div>
-                        <p class="project-desc">Aplikasi manajemen perpustakaan berbasis REST API untuk pengelolaan buku dan anggota.</p>
+                        <p class="project-desc">Aplikasi manajemen perpustakaan berbasis REST API untuk pengelolaan buku
+                            dan anggota.</p>
                         <div class="project-tech">
                             <span>Golang</span>
                             <span>Gin</span>
@@ -159,39 +238,15 @@
                             <button class="btn btn-secondary btn-sm btn-detail" data-project="perpustakaan">
                                 <i class="fa-solid fa-circle-info"></i> Lihat Detail
                             </button>
-                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                            <a href="https://github.com/Yeflou/uas_peminjaman_aset_kampus" class="project-link"
+                                target="_blank" rel="noopener">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Proyek 3: Google Sheets Data Filtering -->
-                <div class="project-card" data-category="frontend">
-                    <div class="project-img-container">
-                        <img src="assets/gsheets.jpg" alt="Google Sheets Data Filtering & Integration" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">API Integration</span>
-                        <h3 class="project-title">Google Sheets Data Filtering & Integration</h3>
-                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Software Developer
-                        </div>
-                        <p class="project-desc">Sistem integrasi data menggunakan Google Sheets API untuk pengambilan dan filtering data secara otomatis.</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>Google Sheets API</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="gsheets">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
 
                 <!-- Proyek 4: Sistem Inventaris Handphone -->
                 <div class="project-card" data-category="fullstack">
@@ -201,10 +256,12 @@
                     <div class="project-content">
                         <span class="project-badge">Information System</span>
                         <h3 class="project-title">Sistem Inventaris Handphone</h3>
-                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                             <strong>Role:</strong> Software Developer
                         </div>
-                        <p class="project-desc">Aplikasi inventaris untuk mengelola stok dan data perangkat handphone.</p>
+                        <p class="project-desc">Aplikasi inventaris untuk mengelola stok dan data perangkat handphone.
+                        </p>
                         <div class="project-tech">
                             <span>CodeIgniter</span>
                             <span>MySQL</span>
@@ -214,34 +271,42 @@
                             <button class="btn btn-secondary btn-sm btn-detail" data-project="inventoryhp">
                                 <i class="fa-solid fa-circle-info"></i> Lihat Detail
                             </button>
-                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                            <a href="https://github.com/elisandksr/inventaris_toko_hp" class="project-link"
+                                target="_blank" rel="noopener">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Proyek 5: SumTime -->
-                <div class="project-card" data-category="mobile">
+                <!-- Proyek: Laporan Desa Cerme -->
+                <div class="project-card" data-category="frontend">
                     <div class="project-img-container">
-                        <img src="assets/sumtime.jpg" alt="SumTime - Aplikasi Pemesanan Dimsum" class="project-img">
+                        <img src="assets/desacerme.jpg" alt="Laporan Desa Cerme - Sistem Layanan Pengaduan Masyarakat"
+                            class="project-img">
                     </div>
                     <div class="project-content">
-                        <span class="project-badge">Mobile Application</span>
-                        <h3 class="project-title">SumTime - Aplikasi Pemesanan Dimsum</h3>
-                        <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Mobile Developer & UI/UX Designer
+                        <span class="project-badge">Web Application</span>
+                        <h3 class="project-title">Laporan Desa Cerme</h3>
+                        <div class="project-role-info"
+                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <strong>Role:</strong> Software Developer
                         </div>
-                        <p class="project-desc">Aplikasi mobile untuk pemesanan dimsum dengan autentikasi dan penyimpanan data real-time.</p>
+                        <p class="project-desc">Sistem Laporan Masyarakat Desa Cerme,
+                            sebuah web untuk memudahkan warga menyampaikan aspirasi maupun keluhan masyarakat Desa Cerme
+                        </p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Supabase</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>EmailJS</span>
                         </div>
                         <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="sumtime">
+                            <button class="btn btn-secondary btn-sm btn-detail" data-project="desacerme">
                                 <i class="fa-solid fa-circle-info"></i> Lihat Detail
                             </button>
-                            <a href="https://github.com" class="project-link" target="_blank" rel="noopener">
+                            <a href="https://github.com/Yeflou/laporan-desa-cerme" class="project-link" target="_blank"
+                                rel="noopener">
                                 <i class="fa-brands fa-github"></i> GitHub
                             </a>
                         </div>
@@ -331,9 +396,7 @@
                         <div class="skill-group">
                             <h4 class="skill-group-title">Wireframing</h4>
                         </div>
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Prototyping</h4>
-                        </div>
+
                         <div class="skill-group">
                             <h4 class="skill-group-title">Desain Antarmuka Pengguna (UI)</h4>
                         </div>
@@ -345,7 +408,7 @@
                         </div>
                         <div class="skill-group">
                             <h4 class="skill-group-title">Tools</h4>
-                            <p class="skill-group-desc">Figma</p>
+                            <p class="skill-group-desc">Figma, Drawio</p>
                         </div>
                     </div>
                 </div>
@@ -405,19 +468,22 @@
             <!-- Tab Content: Desain UI/UX (Large Cards) -->
             <div class="creative-tab-content active" id="tab-uiux">
                 <div class="projects-grid">
-                    
+
                     <!-- UI/UX Card 1: SumTime -->
                     <div class="project-card">
                         <div class="project-img-container">
                             <img src="assets/sumtime.jpg" alt="SumTime UI/UX Design" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Mobile App Design</span>
+                            <span class="project-badge">Mobile App</span>
                             <h3 class="project-title">SumTime - UI/UX Design</h3>
-                            <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer & Researcher
                             </div>
-                            <p class="project-desc">Perancangan antarmuka aplikasi pemesanan dimsum berbasis mobile dengan alur pemesanan interaktif, riset pengguna, wireframing, dan prototyping interaktif di Figma.</p>
+                            <p class="project-desc">Perancangan antarmuka aplikasi pemesanan dimsum berbasis mobile
+                                dengan alur pemesanan interaktif, riset pengguna, wireframing, dan prototyping
+                                interaktif di Figma.</p>
                             <div class="project-tech">
                                 <span>Figma</span>
                                 <span>Wireframing</span>
@@ -425,7 +491,8 @@
                                 <span>User Research</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.figma.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                <a href="https://www.figma.com" target="_blank" rel="noopener"
+                                    class="btn btn-secondary btn-sm">
                                     Lihat Figma Prototype <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
@@ -435,15 +502,18 @@
                     <!-- UI/UX Card 2: Posyandu Redesign -->
                     <div class="project-card">
                         <div class="project-img-container">
-                            <img src="assets/posyandu.jpg" alt="Sistem Informasi Posyandu UI/UX Design" class="project-img">
+                            <img src="assets/posyandu.jpg" alt="Sistem Informasi Posyandu UI/UX Design"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <span class="project-badge">Web Application Design</span>
                             <h3 class="project-title">Sistem Informasi Posyandu - UI/UX Design</h3>
-                            <div class="project-role-info" style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer & Frontend Developer
                             </div>
-                            <p class="project-desc">Perancangan ulang antarmuka dashboard manajemen posyandu untuk memudahkan bidan dan kader memantau kesehatan balita secara intuitif.</p>
+                            <p class="project-desc">Perancangan ulang antarmuka dashboard manajemen posyandu untuk
+                                memudahkan bidan dan kader memantau kesehatan balita secara intuitif.</p>
                             <div class="project-tech">
                                 <span>Figma</span>
                                 <span>Web Design</span>
@@ -451,7 +521,8 @@
                                 <span>Responsive Design</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.figma.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                <a href="https://www.figma.com" target="_blank" rel="noopener"
+                                    class="btn btn-secondary btn-sm">
                                     Lihat Figma Prototype <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
@@ -464,15 +535,17 @@
             <!-- Tab Content: Karya Kreatif Lain (Small Cards) -->
             <div class="creative-tab-content" id="tab-kreatif">
                 <div class="creative-grid-small">
-                    
+
                     <!-- Card 1: Graphic Design -->
                     <div class="creative-card-small">
                         <div class="creative-icon-small">
                             <i class="fa-solid fa-palette"></i>
                         </div>
                         <h3>Graphic Design & Branding</h3>
-                        <p>Pembuatan identitas visual (logo, palet warna, tipografi) dan materi branding untuk promosi produk digital.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+                        <p>Pembuatan identitas visual (logo, palet warna, tipografi) dan materi branding untuk promosi
+                            produk digital.</p>
+                        <a href="https://www.behance.net" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm" style="width: 100%;">
                             Lihat Desain <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -483,8 +556,10 @@
                             <i class="fa-solid fa-photo-film"></i>
                         </div>
                         <h3>Social Media Feed Poster</h3>
-                        <p>Mendesain microblog edukatif, poster interaktif, dan feed aesthetic untuk Instagram menggunakan Illustrator & Canva.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+                        <p>Mendesain microblog edukatif, poster interaktif, dan feed aesthetic untuk Instagram
+                            menggunakan Illustrator & Canva.</p>
+                        <a href="https://www.behance.net" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm" style="width: 100%;">
                             Lihat Poster <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -495,8 +570,10 @@
                             <i class="fa-solid fa-pen-nib"></i>
                         </div>
                         <h3>Vector Illustration</h3>
-                        <p>Mendalami ilustrasi vektor digital, gambar flat design, ikon kustom untuk situs web, dan aset UI kreatif.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;">
+                        <p>Mendalami ilustrasi vektor digital, gambar flat design, ikon kustom untuk situs web, dan aset
+                            UI kreatif.</p>
+                        <a href="https://www.behance.net" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm" style="width: 100%;">
                             Lihat Ilustrasi <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -518,8 +595,20 @@
             <div class="contact-grid-3col">
 
                 <div class="contact-col brand-col">
-                    <a href="#" class="nav-logo footer-logo">
-                        <span class="logo-accent">&lt;</span>FS<span class="logo-accent">.Dev /&gt;</span>
+                    <a href="#" class="nav-logo-custom footer-logo" style="margin-bottom: 20px;">
+                        <span class="logo-prefix"></span>
+                        <span class="logo-letter">a</span>
+                        <span class="logo-letter">m</span>
+                        <span class="logo-letter">e</span>
+                        <span class="logo-letter">l</span>
+                        <span class="logo-letter accent-i">ı</span>
+                        <span class="logo-letter accent-a">a</span>
+                        <span class="logo-dot"></span>
+                        <span class="logo-letter">f</span>
+                        <span class="logo-letter">l</span>
+                        <span class="logo-letter">o</span>
+                        <span class="logo-letter">r</span>
+                        <span class="logo-letter">a</span>
                     </a>
                     <p class="brand-tagline">Mahasiswa Informatika &amp; Fullstack Developer</p>
                 </div>
@@ -602,10 +691,10 @@
                 <div class="modal-details-side">
                     <span class="modal-badge" id="modalBadge">Web Application</span>
                     <h2 class="modal-title" id="modalTitle">Sistem Informasi Posyandu</h2>
-                    
+
                     <p class="modal-description-text" id="modalAbout">Sistem digital untuk pendaftaran...</p>
                     <div class="modal-tech-text" id="modalTechText">HTML • CSS • JavaScript • MySQL</div>
-                    
+
                     <div class="modal-info-block">
                         <h4 class="info-heading">Peran Saya</h4>
                         <ul class="modal-roles-list" id="modalRolesList">
@@ -623,7 +712,8 @@
                     <div class="modal-info-block">
                         <h4 class="info-heading">Tautan</h4>
                         <div class="modal-links-container">
-                            <a href="https://github.com" class="btn btn-primary btn-modal-github" id="modalGithubLink" target="_blank" rel="noopener">
+                            <a href="https://github.com" class="btn btn-primary btn-modal-github" id="modalGithubLink"
+                                target="_blank" rel="noopener">
                                 <i class="fa-brands fa-github"></i> Repository GitHub
                             </a>
                         </div>
