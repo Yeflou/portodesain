@@ -1,0 +1,36 @@
+name: Deploy to nekovps
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-porto
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 147.93.159.42 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Rsync static site to server
+        run: |
+          rsync -az --delete \
+            --exclude='.git' --exclude='.github' \
+            -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes" \
+            ./ deploy@147.93.159.42:porto/html/
+
+      - name: Reload nginx (pick up new files)
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes deploy@147.93.159.42 \
+            'docker exec porto nginx -s reload || true'
