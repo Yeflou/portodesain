@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
@@ -146,14 +146,33 @@
                     <button class="filter-btn" data-filter="animation">Video &amp; Animasi</button>
                 </div>
 
+                <div class="project-controls">
+                    <div class="project-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="projectSearch" placeholder="Cari nama, deskripsi, atau keahlian...">
+                    </div>
+                    <div class="project-sort-box">
+                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                        <select id="projectSort" aria-label="Urutkan proyek">
+                            <option value="year-desc">Tahun: Terbaru &rarr; Terlama</option>
+                            <option value="year-asc">Tahun: Terlama &rarr; Terbaru</option>
+                            <option value="alpha-asc">Nama: A &rarr; Z</option>
+                            <option value="alpha-desc">Nama: Z &rarr; A</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div class="projects-grid">
                     <!-- Proyek 1: UI Design Portofolio -->
-                    <div class="project-card" data-category="uiux">
+                    <div class="project-card" data-category="uiux" data-year="2026">
                         <div class="project-img-container">
                             <img src="assets/porto.png" alt="UI Design Portofolio" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">UI/UX Design</span>
+                            <div class="project-meta">
+                                <span class="project-badge">UI/UX Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
                             <h3 class="project-title">UI Design (High-Fidelity UI) Portofolio</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -175,12 +194,15 @@
                     </div>
 
                     <!-- Proyek 2: Wireframe Game Wakanda Frontline -->
-                    <div class="project-card" data-category="uiux">
+                    <div class="project-card" data-category="uiux" data-year="2025">
                         <div class="project-img-container">
                             <img src="assets/wakanda.png" alt="Wireframe Game Wakanda Frontline" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Game UI/UX</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Game UI/UX</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                            </div>
                             <h3 class="project-title">Wireframe Game Wakanda Frontline</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -202,12 +224,15 @@
                     </div>
 
                     <!-- Proyek 3: Desain Aplikasi SumTime -->
-                    <div class="project-card" data-category="uiux">
+                    <div class="project-card" data-category="uiux" data-year="2025">
                         <div class="project-img-container">
                             <img src="assets/sumtime.jpg" alt="Desain Aplikasi SumTime" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Mobile UI/UX</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Mobile UI/UX</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                            </div>
                             <h3 class="project-title">Desain Aplikasi SumTime</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -229,12 +254,15 @@
                     </div>
 
                     <!-- Proyek 4: Desain Dashboard Posyandu -->
-                    <div class="project-card" data-category="uiux">
+                    <div class="project-card" data-category="uiux" data-year="2025">
                         <div class="project-img-container">
                             <img src="assets/posyandu.jpg" alt="Desain Dashboard Posyandu" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Dashboard UI/UX</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Dashboard UI/UX</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                            </div>
                             <h3 class="project-title">Desain Dashboard Posyandu</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -256,13 +284,16 @@
                     </div>
 
                     <!-- Proyek 5: Branding Amelia Flora -->
-                    <div class="project-card" data-category="graphic">
+                    <div class="project-card" data-category="graphic" data-year="2026">
                         <div class="project-img-container">
                             <img src="assets/logo.png" alt="Branding &amp; Visual Identity" class="project-img"
                                 style="object-fit: contain; background: #fffcf9; padding: 20px;">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Graphic Design</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
                             <h3 class="project-title">Branding Amelia Flora</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -284,12 +315,15 @@
                     </div>
 
                     <!-- Proyek 6: Social Media Feed Poster -->
-                    <div class="project-card" data-category="graphic">
+                    <div class="project-card" data-category="graphic" data-year="2024">
                         <div class="project-img-container">
                             <img src="assets/desacerme.jpg" alt="Social Media Feed Poster" class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Graphic Design</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                            </div>
                             <h3 class="project-title">Social Media Feed Poster</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -311,13 +345,16 @@
                     </div>
 
                     <!-- Proyek 7: Vector Illustration & Custom Icons -->
-                    <div class="project-card" data-category="vector">
+                    <div class="project-card" data-category="vector" data-year="2024">
                         <div class="project-img-container">
                             <img src="assets/gsheets.jpg" alt="Vector Illustration &amp; Custom Icons"
                                 class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Vector Art</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Vector Art</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                            </div>
                             <h3 class="project-title">Vector Illustration &amp; Icons</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -339,13 +376,16 @@
                     </div>
 
                     <!-- Proyek 8: Animasi & Motion Graphics Promosi -->
-                    <div class="project-card" data-category="animation">
+                    <div class="project-card" data-category="animation" data-year="2024">
                         <div class="project-img-container">
                             <img src="assets/perpus.jpg" alt="Animasi &amp; Motion Graphics Promosi"
                                 class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Animation</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Animation</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                            </div>
                             <h3 class="project-title">Animasi &amp; Motion Graphics</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
@@ -367,13 +407,16 @@
                     </div>
 
                     <!-- Proyek 9: Video Editing & Creative Content -->
-                    <div class="project-card" data-category="animation">
+                    <div class="project-card" data-category="animation" data-year="2023">
                         <div class="project-img-container">
                             <img src="assets/inventoryhp.jpg" alt="Video Editing &amp; Creative Content"
                                 class="project-img">
                         </div>
                         <div class="project-content">
-                            <span class="project-badge">Video Editing</span>
+                            <div class="project-meta">
+                                <span class="project-badge">Video Editing</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2023</span>
+                            </div>
                             <h3 class="project-title">Video Editing &amp; Content</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">

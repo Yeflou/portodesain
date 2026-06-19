@@ -78,22 +78,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('#projects .project-card');
+    const projectsGrid = document.querySelector('#projects .projects-grid');
+    const searchInput = document.getElementById('projectSearch');
+    const sortSelect = document.getElementById('projectSort');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let currentSort = 'year-desc';
 
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+    function updateProjects() {
+        if (!projectsGrid || projectCards.length === 0) return;
 
-            button.classList.add('active');
+        const cardsArray = Array.from(projectCards);
 
-            const filterValue = button.getAttribute('data-filter');
+        // 1. Sort the cards
+        cardsArray.sort((a, b) => {
+            if (currentSort === 'year-desc') {
+                const yearA = parseInt(a.getAttribute('data-year') || '0');
+                const yearB = parseInt(b.getAttribute('data-year') || '0');
+                return yearB - yearA;
+            } else if (currentSort === 'year-asc') {
+                const yearA = parseInt(a.getAttribute('data-year') || '0');
+                const yearB = parseInt(b.getAttribute('data-year') || '0');
+                return yearA - yearB;
+            } else if (currentSort === 'alpha-asc') {
+                const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
+                const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
+                return titleA.localeCompare(titleB);
+            } else if (currentSort === 'alpha-desc') {
+                const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
+                const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
+                return titleB.localeCompare(titleA);
+            }
+            return 0;
+        });
 
-            projectCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
+        // Re-append to grid to update DOM order
+        cardsArray.forEach(card => {
+            projectsGrid.appendChild(card);
+        });
 
-                if (filterValue === 'all' || cardCategory === filterValue) {
+        // 2. Filter and search visibility
+        let visibleCount = 0;
+        cardsArray.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const title = card.querySelector('.project-title').textContent.toLowerCase();
+            const desc = card.querySelector('.project-desc').textContent.toLowerCase();
+            const role = card.querySelector('.project-role-info') ? card.querySelector('.project-role-info').textContent.toLowerCase() : '';
+            
+            // Collect tech keywords
+            const techSpans = card.querySelectorAll('.project-tech span');
+            let techText = '';
+            techSpans.forEach(span => {
+                techText += span.textContent.toLowerCase() + ' ';
+            });
+
+            const matchesFilter = currentFilter === 'all' || category === currentFilter;
+            const matchesSearch = currentSearch === '' || 
+                title.includes(currentSearch) || 
+                desc.includes(currentSearch) || 
+                role.includes(currentSearch) || 
+                techText.includes(currentSearch);
+
+            if (matchesFilter && matchesSearch) {
+                if (card.style.display !== 'flex') {
                     card.style.display = 'flex';
-
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.95)';
                     setTimeout(() => {
@@ -101,12 +150,63 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.transform = 'scale(1)';
                         card.style.transition = 'var(--transition)';
                     }, 50);
-                } else {
-                    card.style.display = 'none';
                 }
-            });
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Handle "No projects found" message if none match
+        let noProjectsMsg = document.getElementById('no-projects-msg');
+        if (visibleCount === 0) {
+            if (!noProjectsMsg) {
+                noProjectsMsg = document.createElement('div');
+                noProjectsMsg.id = 'no-projects-msg';
+                noProjectsMsg.style.textAlign = 'center';
+                noProjectsMsg.style.padding = '50px 20px';
+                noProjectsMsg.style.gridColumn = '1 / -1';
+                noProjectsMsg.style.color = 'var(--text-muted)';
+                noProjectsMsg.style.fontSize = '1.1rem';
+                noProjectsMsg.innerHTML = '<i class="fa-regular fa-folder-open" style="font-size: 3.5rem; margin-bottom: 15px; display: block; color: var(--primary);"></i> Tidak ada proyek yang cocok dengan pencarian Anda.';
+                projectsGrid.appendChild(noProjectsMsg);
+            } else {
+                noProjectsMsg.style.display = 'block';
+            }
+        } else {
+            if (noProjectsMsg) {
+                noProjectsMsg.style.display = 'none';
+            }
+        }
+    }
+
+    // Event listeners
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            currentFilter = button.getAttribute('data-filter');
+            updateProjects();
         });
     });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase().trim();
+            updateProjects();
+        });
+    }
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            currentSort = e.target.value;
+            updateProjects();
+        });
+    }
+
+    // Run once on load to establish initial order
+    updateProjects();
+
 
     const photoFrame = document.getElementById('photoFrame');
     const photoInput = document.getElementById('photoInput');

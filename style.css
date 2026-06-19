@@ -579,6 +579,97 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--primary);
 }
 
+.project-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-search-box, .project-sort-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 12px 18px;
+    transition: var(--transition);
+}
+
+.project-search-box {
+    flex-grow: 2;
+}
+
+.project-sort-box {
+    flex-grow: 1;
+}
+
+.project-search-box:focus-within, .project-sort-box:focus-within,
+.project-search-box:hover, .project-sort-box:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px rgba(255, 112, 99, 0.08);
+}
+
+.project-search-box i, .project-sort-box i {
+    color: var(--text-muted);
+    margin-right: 10px;
+    font-size: 0.95rem;
+}
+
+.project-search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.project-search-box input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+.project-sort-box select {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    padding-right: 20px;
+}
+
+.project-sort-box::after {
+    content: '\f107'; /* fa-chevron-down */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 18px;
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .project-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+}
+
+
 .projects-section .container {
     max-width: 1280px;
 }
@@ -664,15 +755,38 @@ h1, h2, h3, h4, h5, h6 {
     width: 58%;
 }
 
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
 .project-badge {
     color: var(--primary);
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 8px;
-    display: block;
+    display: inline-block;
 }
+
+.project-year {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background-color: var(--accent-bg);
+    border: 1px solid var(--border-color);
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+}
+
 
 .project-title {
     font-size: 1.25rem;
